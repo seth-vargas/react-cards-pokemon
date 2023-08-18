@@ -10,6 +10,9 @@ export default function useAxios(
 
   async function addCard() {
     console.log("getting card");
+    if (name != null) {
+      url = url + name;
+    }
     console.log(url);
     const response = await axios.get(url);
     setCards((cards) => [...cards, { ...response.data, id: uuid() }]);
