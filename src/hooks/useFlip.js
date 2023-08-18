@@ -7,5 +7,5 @@ export default function useFlip(isFlipped = false) {
     setValue((old) => !old);
   }
 
-  return [currentFlipState, toggleFlipState];
+  return [value, toggleFlipState];
 }
